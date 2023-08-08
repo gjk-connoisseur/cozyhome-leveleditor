@@ -1,0 +1,93 @@
+{
+    "resources": {
+        "sprites": {
+            "imgfp":"images/sprites.png"
+        },
+        "tracks": {
+            "mds":[
+                {"id":0, "bpm":146, "name":"March of the Profane", "path":"tracks/track0.mp3"},
+                {"id":1, "bpm":146, "name":"Dance of the Decorous", "path":"tracks/track1.mp3"},
+                {"id":2, "bpm":140,	"name":"For Whom the Knell Tolls", "path":"tracks/track2.mp3"},
+                {"id":3, "bpm":130, "name":"Rhythmortis", "path":"tracks/track3.mp3"}
+            ]
+        },
+        "sounds": {
+            "mds":[
+                {"id":0, "name":"skele_attack", "path":"sounds/skelattack.ogg"},
+                {"id":1, "name":"skele_death", "path":"sounds/skeldeath.ogg"},
+                {"id":2, "name":"skele_hurt0", "path":"sounds/skelhurt0.ogg"},
+                {"id":3, "name":"skele_hurt1", "path":"sounds/skelhurt1.ogg"},
+                {"id":4, "name":"skele_hurt2", "path":"sounds/skelhurt2.ogg"},
+                {"id":5, "name":"food", "path":"sounds/food.ogg"},
+                {"id":6, "name":"diamond", "path":"sounds/diamond.ogg"},
+                {"id":7, "name":"death", "path":"sounds/death.ogg"},
+                {"id":8, "name":"attack0", "path":"sounds/attack0.ogg"},
+                {"id":9, "name":"attack1", "path":"sounds/attack1.ogg"},
+                {"id":10, "name":"attack2", "path":"sounds/attack2.ogg"},
+                {"id":11, "name":"attack3", "path":"sounds/attack3.ogg"},
+                {"id":12, "name":"attack4", "path":"sounds/attack4.ogg"}
+            ]
+        }
+    },
+    "entities": {
+        "diamond":{ 
+            "tds": [
+                {"id":8,"name"  :"dim_","ox":192, "oy":0,"w":28,"h":28,"sx":2,"sy":2, "cx": -3,"cy":10},
+                {"id":9,"name"  :"dim0","ox":192, "oy":0,"w":28,"h":28,"sx":2,"sy":2, "cx": -3,"cy":10},
+                {"id":10,"name" :"dim1","ox":220, "oy":0,"w":28,"h":28,"sx":2,"sy":2, "cx": -2,"cy":10},
+                {"id":11,"name" :"dim2","ox":248, "oy":0,"w":28,"h":28,"sx":2,"sy":2, "cx": -3,"cy":10},
+                {"id":12,"name" :"dim3","ox":276, "oy":0,"w":28,"h":28,"sx":2,"sy":2, "cx": -3,"cy":10}
+            ]
+        },
+        "food": {
+            "tds":[
+		        {"id":13,"name" :"food","ox":304, "oy":0,"w":28,"h":28,"sx":2,"sy":2, "cx": -3,"cy":10}
+            ]
+        },
+        "player": {
+            "sids":{
+                "food":[{"id":0, "sid":5}],
+                "diamond":[{"id":0, "sid":6}],
+                "death":[{"id":0, "sid":7}],
+                "atck":[{"id":0, "sid":8}, {"id":1, "sid":9},{"id":2, "sid":10},{"id":3, "sid":11},{"id":4, "sid":12}]
+            }
+        },
+        "skeleton": {
+            "sids":{
+                "atck" :[{"id":0,"sid":0}],
+                "death":[{"id":1,"sid":1}],
+                "hurt" :[{"id":0,"sid":2},{"id":1,"sid":3},{"id":2,"sid":4}]
+            },
+	        "tds":[
+		        {"id":0,"name"  :"idl0","ox":0,   "oy":0,"w":24,"h":28,"sx":2,"sy":2, "cx":-12,"cy":10},
+		        {"id":1,"name"  :"idl1","ox":24,  "oy":0,"w":24,"h":28,"sx":2,"sy":2, "cx":-12,"cy":10},
+		        {"id":2,"name"  :"idl2","ox":24,  "oy":0,"w":24,"h":28,"sx":2,"sy":2, "cx":-12,"cy":10},
+		        {"id":3,"name"  :"idl2","ox":48,  "oy":0,"w":24,"h":28,"sx":2,"sy":2, "cx":-12,"cy":10},
+		        {"id":4,"name"  :"atk0","ox":96,  "oy":0,"w":26,"h":28,"sx":2,"sy":2, "cx":-12,"cy":10},
+		        {"id":5,"name"  :"atk1","ox":120, "oy":0,"w":26,"h":28,"sx":2,"sy":2, "cx":-12,"cy":10},
+		        {"id":6,"name"  :"atk2","ox":144, "oy":0,"w":26,"h":28,"sx":2,"sy":2, "cx":-12,"cy":10},
+		        {"id":7,"name"  :"atk3","ox":168, "oy":0,"w":26,"h":28,"sx":2,"sy":2, "cx":-12,"cy":10}
+	        ],
+            "anim":{
+                "idle":{
+                    "repeat":true,
+                    "frames":[
+                        {"id":0, "tid":0, "ft":0.25},
+                        {"id":1, "tid":1, "ft":0.25},
+                        {"id":2, "tid":2, "ft":0.25},
+                        {"id":3, "tid":3, "ft":0.25}
+                    ]
+                },
+                "atck":{
+                    "repeat":true,
+                    "frames":[
+                        {"id":4, "tid":4, "ft":0.25},
+                        {"id":5, "tid":5, "ft":0.25},
+                        {"id":6, "tid":6, "ft":0.25},
+                        {"id":7, "tid":7, "ft":0.25}
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "resources":{
+        "icons":{
+            "brush_tool":{"id":0,"path":"images/brush_tool.png"},
+            "brush_create":{"id":1,"path":"images/brush_create.png"},
+            "brush_remove":{"id":2,"path":"images/brush_remove.png"},
+            "entity_tool":{"id":3,"path":"images/ent_tool.png"},
+            "entity_create":{"id":4,"path":"images/ent_create.png"},
+            "entity_remove":{"id":5,"path":"images/ent_remove.png"},
+            "paint_tool":{"id":6,"path":"images/paint_tool.png"},
+            "paint_wall":{"id":7,"path":"images/paint_wall.png"},
+            "paint_ceil":{"id":8,"path":"images/paint_ceil.png"},
+            "paint_floor":{"id":9,"path":"images/paint_floor.png"},
+			"create_world":{"id":10,"path":"images/new.png"},
+			"load_world":{"id":11,"path":"images/load.png"},
+			"options":{"id":12,"path":"images/options.png"}
+        },
+		"sounds":[
+			{"id":0, "name":"hit0", "path":"sounds/hit0.ogg" },
+			{"id":1, "name":"hit1", "path":"sounds/hit1.ogg" },
+			{"id":2, "name":"hit2", "path":"sounds/hit2.ogg" },
+			{"id":3, "name":"hit3", "path":"sounds/hit3.ogg" },
+			{"id":4, "name":"hit4", "path":"sounds/hit4.ogg" },
+			{"id":5, "name":"hit5", "path":"sounds/hit5.ogg" },
+			{"id":6, "name":"hit6", "path":"sounds/hit5.ogg" },
+			{"id":7, "name":"sel0", "path":"sounds/sel0.ogg" },
+			{"id":9, "name":"sel1", "path":"sounds/sel1.ogg" }
+		]
+    }
+}

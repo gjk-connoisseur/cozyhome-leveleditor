@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Final Project</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.2/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.2/lib/addons/p5.sound.min.js"></script>
+	
+	<!-- p5forms library -->
+	<script src="p5forms.js"></script>
+	<script src="p5controls.js"></script>
+
+	<script src="vector.js"></script>							<!-- my vector lib -->
+	<script src="matrix.js"></script>							<!-- perlin's matrix lib -->
+	<script src="more.js"></script>								<!-- my misc lib -->
+	<script src="FileSaver.js"></script>						<!-- useful serialize lib -->
+    <script src="main.js"></script>								<!-- main file -->
+    <style>
+		body {
+			background: black;
+			border: none;
+			font-family: Verdana;
+			color:white;
+		}
+		#center_view {
+			display:flex;
+			flex-direction:column;
+			justify-content:center;
+			align-items:center;
+			border: none;
+			gap:20px;
+		}
+		#center_flexbox {
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			border: 3px solid white;
+		}
+       		#controls {
+                	margin: auto;
+                	text-align: center;
+                	padding-top: 20px;
+        	}
+		.text {
+			gap:15px;
+			text-align:center;
+		}
+		hl {
+			color:yellow;
+		}
+		hl2 {
+			color:orange;
+		}
+		hl3 {
+			color:red;
+		}
+	</style>
+  </head>
+  <body>
+		<div id="center_view">
+			<div id="center_flexbox"></div>
+    		<div id="controls">
+      			<hl>VOLUME</hl>: <input type="range" id="volume" min="0" max="100" step="1" value="10" oninput="changeVolume(this);"><br>
+    		</div>
+			<div class="text">
+				<p1>UNTITLED LEVEL EDITOR: THE PROTOTYPE VERSION 2.0 </p1>
+				<br><p1><hl2>3D VIEWPORT CONTROLS</hl2></p1>
+				<br><p1><hl>W</hl> and <hl>S</hl> to move forward and back!</p1>
+				<br><p1><hl>A</hl> and <hl>D</hl> to rotate!</p1>
+				<br><p1><hl>Q</hl> and <hl>E</hl> to change field of view!</p1>
+				<br><p1><hl3>2D VIEWPORT CONTROLS</hl3></p1>
+				<br><p1><hl>W</hl> and <hl>S</hl> to move the scene up and down!</p1>
+				<br><p1><hl>A</hl> and <hl>D</hl> to move the scene left and right!</p1>
+				<br><p1><hl>Q</hl> and <hl>E</hl> to zoom in and out!</p1>
+				<br><p1><hl>TOOLS</hl></p1>
+				<br><p1><hl>BRUSH:</hl> Either add or remove sectors!</p1>
+				<br><p1><hl2>PAINT:</hl2> Paint the sides of the geometry!</p1>
+				<br><p1><hl3>SAVE:</hl3> Save your scene for later!</p1>
+				<br><p1><hl>CLICK ONE OF THE TOOLS IN THE TOOLBAR TO GET STARTED!</hl></p1>
+			</div>
+		</div>
+  </body>
+</html>
