@@ -130,7 +130,7 @@ class lerped2 {
 
 //vec3
 const add3 = (v,w) => new vec3(v.x()+w.x(),v.y()+w.y(), v.z()+w.z());
-const sub3 = (v,w) => new vec3(v.x()-w.x(),v.y()-w.y(), v.z()+w.z());
+const sub3 = (v,w) => new vec3(v.x()-w.x(),v.y()-w.y(), v.z()-w.z());
 const mul3 = (c,v) => new vec2(c*v.x(),c*v.y(),c*v.z());
 const dot3 = (v,w) => v.x()*w.x()+v.y()*w.y()+v.z()*w.z();
 const norm3 = (v) => Math.sqrt(dot3(v,v));
