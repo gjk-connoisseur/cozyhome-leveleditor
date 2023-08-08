@@ -1465,31 +1465,12 @@ class Resources {
 				this.#_tex2D = sam;
 			});
 		});
-// LOAD GAME DATA
-		this.#_trcks = new Tracksheet();
-		loadJSON('json/gme_dat.json', (jgme)=> {
-			this.#_jgme = jgme;
-// LOAD TRACKS
-			this.construct_tracksheet(jgme.resources.tracks, (trackobj) => {
-				trackobj.track.setVolume(0.1);
-				trackobj.track.setLoop(false);
-				trackobj.track.playMode('restart');
-				this.#_trcks.add_track(trackobj);		
-			});
-		});
 	}
 	construct_sampler2D=(texd,assgn)=> {
 		const imgfp = texd.imgfp;
 		loadImage(imgfp, (imgdata)=> {
 			assgn(new Sampler2D(texd.tds, imgdata), imgdata);
 		});
-	}
-	construct_tracksheet=(trcks, assgn)=> {
-		for(const ds of trcks.mds) {
-			loadSound(ds.path, (track) => {
-				assgn({id: ds.id, bpm: ds.bpm, path: ds.path, tnam: ds.tnam, track: track});
-			});
-		}
 	}
 	construct_soundsampler=(sounds, assgn)=> {
 		for(const ds of sounds) {
@@ -1498,7 +1479,6 @@ class Resources {
 			});
 		}
 	}
-	tracks=()=>this.#_trcks;
 	edtsounds=()=>this.#_edtsounds;
 	tex2D=()=>this.#_tex2D;
 	icons=()=>this.#_ics;
@@ -1815,7 +1795,6 @@ function changeVolume(el) {
 const SCREEN_FSM = new FSM([{
 	key:'init',
 	setup:function(fsm,man) {
-//		RES.tracks().get_track(3).track.play();
 		const tempVOL = window.localStorage.getItem("VOLUME", VOLUME_AMOUNT);
 		if(tempVOL != null) VOLUME = float(tempVOL);
 		else { 
